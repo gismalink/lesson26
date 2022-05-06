@@ -1,0 +1,172 @@
+* {
+    font-family: 'Roboto', serif;
+}
+
+nav {
+    background-color: #212121;
+}
+
+.menu {
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+    margin: 0;
+    list-style-type: none;
+}
+
+header {
+    position: relative;
+}
+
+.menu_link {
+    color: #fff;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.menu_item {
+    border-right: 2px dotted rgb(112, 45, 133);
+    padding-right: 27px;
+}
+
+.subheader {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 10px 0;
+}
+
+.order_call {
+    width: 172px;
+    height: 46px;
+}
+
+.logo_text, .call_text {
+    color: rgba(256, 256, 256, .6);
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 13px;
+}
+
+.call_number {
+    display: block;
+    color: rgba(256, 256, 256, 1);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 23px;
+}
+
+.order_call_btn {
+    border-radius: 6px;
+    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
+    border: none;
+    width: 162px;
+    height: 46px;
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+    color:#fff;
+    font-size: 14px;
+}
+
+.row {
+    align-items: center
+}
+
+.uber {
+    background-image: url('../img/uber_bg.jpg');
+    padding: 150px 0 180px 0;
+}
+
+h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 34px;
+    text-align: center;
+}
+
+h2 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+}
+
+.uber_text {
+    color: #fff;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+}
+.send_request_btn {
+    display: block;
+    border-radius: 6px;
+    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
+    border: none;
+    width: 262px;
+    height: 64px;
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+    color:#fff;
+    font-size: 16px;
+    margin: 116px auto 0 auto;
+}
+.advantages{
+    padding: 18px 0 60px 0;
+}
+.section_tag {
+    width: 115px;
+    height: 27px;
+    margin: 0 auto;
+    margin-bottom: 0;
+    background-color: #000;
+    color:#fff;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 11px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_caption {
+    color:#000;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 48px;
+    text-transform: uppercase;
+    margin-top: 34px;
+    text-align: center;
+}
+
+.advantage{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 38px;
+}
+
+.advantage_img {
+    width: 116px;
+    height: 116px;
+    margin-right: 20px;
+}
+.advantage_text_caption {
+    color: #1EACC7;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 18px;
+    margin-top: 10px;
+}
+.advantage_text_desc {
+    color: #000;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 16px;
+    margin-top: 10px;
+}

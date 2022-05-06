@@ -1,0 +1,483 @@
+
+$sm: 575px
+$md: 767px
+$lg: 991px
+$xl: 1199px
+$xxl: 1399px
+
+
+=btn_states
+    &:hover
+        background: linear-gradient(0deg, #60dff8 0%, #a0efff 100%)
+        color:#000
+        transform: scale(1.02)
+    &:active
+        background: linear-gradient(0deg, #1797b1 0%, #107daf 100%)
+        color:#111
+        transform: scale(0.98)
+
+header
+    position: relative
+    nav
+        position: relative
+        background-color: #131313   
+        min-height: 50px
+        .burger
+            display: block
+            position: absolute
+            right: 10px
+            top: 50%
+            transform: translateY(-50%)
+            width: 26px
+            height: 12px
+            @media ( min-width: $md )
+                display: none
+            span
+                display: block
+                height: 2px
+                width: 26px
+                background-color: #ffffffff
+                margin-bottom: 2px
+                transition: .5s all
+            &_active
+                span
+                    margin-bottom: -2px
+                    &:nth-child(1)
+                        transform: translateY(3px) rotate(-45deg)
+                    &:nth-child(2)
+                        background-color: #ffffff00
+                    &:nth-child(3)
+                        transform: translateY(3px) rotate(45deg)
+        .menu
+            display: flex
+            //justify-content: space-between
+            justify-content: center
+            align-items: center
+            flex-wrap: wrap
+            padding: 4px 70px    
+            margin: 0
+            list-style-type: none
+            column-gap: 22px
+            row-gap: 8px
+            transition: .4s all
+            @media (max-width: $xl)
+                padding: 12px 70px
+            @media (max-width: $md)
+                position: fixed
+                top: 0
+                left: -50%
+                width: 50%
+                height: 100vh
+                flex-direction: column
+                flex-wrap: nowrap
+                row-gap: 44px
+                padding: 4px 20px   
+                background-color: #060508ee
+                z-index: 2
+            @media (max-width: $sm)
+                width: 100%
+                left: -100%
+            &_active
+                left: 0
+            &_item
+                border-right: 2px dotted #344458
+                padding-right: 22px
+                line-height: 13px
+                text-align: center
+                &:last-child
+                    border: none
+                @media (max-width: $md)
+                    border: none
+                    line-height: 180%
+            &_link
+                color: #fff
+                font-weight: 400
+                font-size: 15px        
+                padding-bottom: 2px
+                text-decoration: none
+                transition: .3s all
+                &:hover
+                    color: #93c3ff            
+                &:active
+                    color: #3f85db
+                @media (max-width: $md)
+                    font-size: 23px
+                    font-weight: 300
+    .subheader
+        position: absolute
+        width: 100%
+        background-color: rgba(0, 0, 0, .6)
+        padding: 10px 0
+        .row
+            flex-direction: row
+            @media (max-width: 300px)
+                flex-direction: column
+            .logo
+                width: 285px
+                @media (max-width: $lg)
+                    width: 100%
+            .logo_text
+                color: rgba(256, 256, 256, .6)
+                font-weight: 300
+                font-size: 13px
+                line-height: 13px
+                @media (max-width: $lg)
+                    font-size: 11px
+                @media (max-width: $sm)
+                    font-size: 9px
+            .data
+                display: flex
+                justify-content: space-between
+                align-items: center
+                gap: 8px
+                @media (max-width: $md)
+                    flex-direction: column
+                .order_call_btn
+                    border-radius: 6px
+                    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
+                    border: none
+                    width: 162px
+                    height: 46px
+                    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
+                    text-transform: uppercase
+                    color:#fff
+                    font-size: 14px
+                    transition: .3s all        
+                    +btn_states
+                .call_number
+                    display: block
+                    text-decoration: none
+                    color: rgba(256, 256, 256, 1)
+                    font-weight: 400
+                    font-size: 22px
+                    line-height: 23px
+                    @media (max-width: $lg)
+                        font-size: 21px
+                .call_text
+                    color: rgba(256, 256, 256, .6)
+                    font-weight: 300
+                    font-size: 13px
+                    line-height: 13px
+                    @media (max-width: $md)
+                        display: none
+
+.uber
+    background: url(../img/uber_bg.jpg) center (center/cover) no-repeat
+    padding: 150px 0 180px 0
+    .uber_text
+        color: #fff
+        font-weight: 300
+        font-size: 18px
+        line-height: 140%
+        text-align: center
+        margin-top: 22px
+    .send_request_btn
+        display: block
+        border-radius: 6px
+        background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
+        border: none
+        width: 262px
+        height: 64px
+        box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
+        text-transform: uppercase
+        color:#fff
+        font-size: 16px
+        margin: 116px auto 0 auto
+        transition: .3s all        
+        +btn_states     
+
+h1
+    color: #fff
+    font-weight: 700
+    font-size: 60px
+    line-height: 90%
+    text-align: center
+    margin-bottom: 0
+    @media (max-width: $lg)
+            font-size: 50px
+
+h2
+    color: #fff
+    font-weight: 700
+    font-size: 36px
+    line-height: 100%
+    text-align: center
+    margin-bottom: 0
+    margin-top: 12px
+    @media (max-width: $lg)
+            font-size: 30px
+//
+.section_tag
+    width: 115px
+    height: 27px
+    margin: 0 auto
+    margin-bottom: 0
+    background-color: #000
+    color:#fff
+    font-weight: 300
+    font-size: 11px
+    line-height: 11px
+    text-transform: uppercase
+    display: flex
+    justify-content: center
+    align-items: center
+.section_caption
+    color:#000
+    font-weight: 700
+    font-size: 38px
+    line-height: 48px
+    text-transform: uppercase
+    margin-top: 34px
+    text-align: center
+.section_subcaption
+    color:#000
+    font-weight: 400
+    font-size: 17px
+    line-height: 21px
+    margin-top: 8px
+    text-align: center
+.inverted
+    background-color: #fff
+    color:#000
+.invertedtext
+    color:#fff
+//
+.advantages
+    padding: 18px 0 60px 0
+    .advantage
+        display: flex
+        justify-content: space-between
+        align-self: flex-start
+        margin-top: 38px
+        @media (max-width: $lg)
+            flex-direction: column
+            align-items: center
+            text-align: center
+        .advantage_img
+            width: 116px
+            height: 116px
+            margin-right: 20px
+        .advantage_text_caption
+            color: #1EACC7
+            font-weight: 400
+            font-size: 17px
+            line-height: 18px
+            margin-top: 10px
+        .advantage_text_desc
+            color: #000
+            font-weight: 300
+            font-size: 15px
+            line-height: 16px
+            margin-top: 10px
+//
+.mobile
+    min-height: 864px
+    padding: 48px 0 80px 0
+    background: url(../img/mobile_bg.png) center (center / cover) no-repeat
+    &_item
+        width: 100%
+        height: 280px
+        margin: 0 auto
+        margin-top: 20px
+        padding: 82px 12px 34px 12px
+        background-color: #000
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        text-transform: uppercase
+        text-align: center
+        color: #fff
+        font-size: 22px
+        line-height: 23px
+        font-weight: 300
+        @for $i from 1 through 6
+            &_#{$i}
+                background: url(../img/card_#{$i}.jpg) center (center / cover) no-repeat
+        .mobile_item_plus
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 26px
+            height: 26px
+            background-color: #000
+            border-radius: 100%
+            cursor: pointer
+            transition: .2s all
+            &::before
+                content: '+'
+                display: block
+            &:hover
+                background-color: $main-color
+                transform: scale(1.4)
+//
+.uberx
+    position: relative
+    padding: 18px 0 60px 0
+    min-height: 900px
+    background-color: #000
+    z-index: -2
+    .halfbg
+        position: absolute
+        width: 100%
+        height: 450px
+        bottom: 0
+        z-index: -1
+    .car
+        display: flex
+        justify-content: center   
+        margin-top: 56px
+        height: 480px
+        @media (max-width: $md)
+            margin-top: 0
+            min-height: 0
+        &_img
+            @media (max-width: $md)
+                width: 100%
+                object-fit: contain
+
+
+
+.require
+    padding: 66px 0 88px 0
+    min-height: 920px
+    .row
+        margin-top: 32px
+        .block
+            margin-bottom: 62px
+            .caption
+                font-size: 22px
+                margin-bottom: 10px
+                color: $main-color
+            .req_li_item
+                list-style: none
+                font-size: 17px
+                margin-bottom: 6px
+                position: relative
+                &:before
+                    content: ''
+                    display: block
+                    width: 21px
+                    height: 21px
+                    position: absolute
+                    left: -28px
+                    top: 2px
+                    background: url(../img/li.svg) center (center/cover) no-repeat
+            .desc
+                font-size: 17px
+                color: $main-color
+            &:nth-child(3), &:nth-child(4)
+                .caption, .desc
+                    color: $second-color
+                .req_li_item                
+                    &:before
+                        background: url(../img/li-second.svg) center (center/cover) no-repeat
+//
+.world
+    min-height: 720px
+    background: #000
+    padding: 26px 0 20px 0
+    background: url(../img/world.jpg) center (center/cover) no-repeat
+    .overworld
+        height: 68px
+        width: 234px
+        border: 0px
+        display: block
+        margin: 0 auto
+        margin-top: 400px
+        background: #000
+        color: $main-color
+        text-transform: uppercase
+        font-size: 15px
+        transition: .4s all
+        &:hover
+            background: #171420
+            //transform: translateX(-100%)
+            transform: translateY(-5px)
+//
+footer
+    .divider
+        width: 300px
+        height: 4px
+        margin: 13px auto 22px auto
+        background-color: $main-color
+    .wrap
+        display: flex
+        justify-content: space-between
+        @media (max-width: $lg)
+            flex-direction: column
+            row-gap: 8px        
+        @media (max-width: $lg)
+            .od1
+                order: 1
+            .od2
+                order: 2
+        &_block
+            width: 33%
+            @media (max-width: $lg)
+                width: 100%
+            .social
+                display: flex
+                flex-wrap: wrap
+                gap: 6px
+                @media (max-width: $lg)
+                    justify-content: center
+                    order: 1
+                &_link
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    height: 36px
+                    width: 36px
+                    border-radius: 50%
+                    background-color: #000
+                    color: #fff
+            .links_block
+                display: flex
+                flex-direction: column
+                justify-content: center
+                flex-wrap: wrap
+                text-transform: uppercase            
+                .line1
+                    display: flex
+                    justify-content: center
+                    column-gap: 22px
+                    font-size: 15px
+                    color: #070716
+                    margin-bottom: 0
+                    @media (max-width: $sm)
+                        column-gap: 12px
+                .line2
+                    display: flex
+                    justify-content: center
+                    margin-top: 12px
+                    column-gap: 14px
+                    font-size: 11px
+                    margin-bottom: 0
+                    text-align: center
+                    @media (max-width: $sm)
+                        column-gap: 6px
+                        font-size: 10px
+                .lang
+                    display: block
+                    margin-top: 14px
+                    text-align: center
+                    font-size: 11px
+                    color: $main-color
+                    margin-bottom: 0
+            .apps
+                display: flex
+                flex-wrap: wrap
+                justify-content: flex-end
+                gap: 7px
+                @media (max-width: $lg)
+                    justify-content: center
+                .app
+                    display: block
+                    width: 94px
+                    height: 26px
+                    background-color: #000
+                    border-radius: 5px
+                    border: none
+
+
